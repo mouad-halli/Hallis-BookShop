@@ -10,10 +10,9 @@ import { SERVER_URL } from '../config/envConfig'
 const { OK, CREATED, BAD_REQUEST, NOT_FOUND } = StatusCodes
 
 export const me = async (req: IGetUserAuthInfoRequest, res: Response, next: NextFunction) => {
-
     try {
 
-        const me = await User.findById(req.user._id, "-__v -googleId -password -books")
+        const me = await User.findById(req.user._id, "-__v -googleId -books")
 
         if (!me)
             res.status(createError(NOT_FOUND, "user not found"))
@@ -120,7 +119,8 @@ export const updateUser = async (req: IGetUserAuthInfoRequest, res: Response, ne
             await User.findByIdAndUpdate(
                 req.user._id,
                 { $set: req.body },
-                { new: true, fields: { password: 0 } }
+                // { new: true, fields: { password: 0 } }
+                { new: true }
             )
         }
 
@@ -151,7 +151,7 @@ export const setUserImage = async (req: IGetUserAuthInfoRequest, res: Response, 
     }
 }
 
-export const deleteUser = async (req, res, next) => {
+export const deleteUser = async (req: IGetUserAuthInfoRequest, res: Response, next: NextFunction) => {
 	try {
 
         await User.findByIdAndDelete(req.params.id)
@@ -162,7 +162,7 @@ export const deleteUser = async (req, res, next) => {
     }
 }
 
-export const getUser = async (req, res, next) => {
+export const getUser = async (req: IGetUserAuthInfoRequest, res: Response, next: NextFunction) => {
 	try {
 
         const user = await User.findById(req.params.id)
@@ -173,7 +173,7 @@ export const getUser = async (req, res, next) => {
     }
 }
 
-export const getAllUsers = async (req, res, next) => {
+export const getAllUsers = async (req: IGetUserAuthInfoRequest, res: Response, next: NextFunction) => {
 	try {
         const users = await User.find()
         res.status(OK).json(users)
@@ -188,12 +188,12 @@ export const findAllUserWithBooks = async (req: IGetUserAuthInfoRequest, res: Re
 
         const minBooks = Number(req.params.min_books) || 6
 
-        let users = await User.find(
+        const users = await User.find(
             {$expr:{$gte:[{$size:"$books"}, minBooks]}},
             { firstname: 1, lastname: 1, username: 1, imgPath: 1, books: 1 }
-        ).populate({ path: 'books', select: 'imgPath' })
+        ).populate({ path: 'books', match: { archived: false }, select: 'imgPath' })
 
-        res.status(OK).json(users)
+        res.status(OK).json(users.filter(user => user.books.length > 0))
 
     } catch (error) {
         next(error)

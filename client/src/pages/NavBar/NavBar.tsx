@@ -17,12 +17,13 @@ export const NavBar = () => {
     } =  useNavBarHook()
 
     return (
+        <>
         <motion.nav className=' z-10 flex w-full items-center h-24 justify-between px-4 gap-x-4'
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 100 }}
         >
-            <div className=' max-w-[8rem]'>
+            <div className='w-full max-w-[8rem]'>
                 <img className=' transition duration-150 ease-in-out hover:scale-110 cursor-pointer' src={storeLogo} onClick={() => navigate('/')} />
             </div>
             <div className='w-full h-full flex items-center'>
@@ -82,7 +83,7 @@ export const NavBar = () => {
                         <div ref={userDropDownRef} className='relative'
                         >
                             <img
-                                className=' object-cover h-full w-full max-h-9 max-w-9 rounded-full cursor-pointer ring-1 ring-slate-700 ring-blue-700/60 hover:text-blue-600 hover:scale-110 transition ease-linear duration-150 '
+                                className=' object-cover h-9 w-9 rounded-full cursor-pointer ring-1 ring-slate-700 ring-blue-700/60 hover:text-blue-600 hover:scale-110 transition ease-linear duration-150 '
                                 src={ user?.imgPath }
                                 referrerPolicy={"no-referrer"}
                                 onClick={() => setIsUserDropDownVisible(!isUserDropDownVisible)}
@@ -114,5 +115,9 @@ export const NavBar = () => {
             }
             </div>
         </motion.nav>
+        {/* <div className=' z-30 fixed h-screen w-full top-24 bg-slate-50'>
+
+        </div> */}
+        </>
     )
 }

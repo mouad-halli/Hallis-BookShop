@@ -45,9 +45,9 @@ export interface IBook {
     genre: String
     year: number
     bookLanguage: string
-    rating: number
     description: string
     imgPath: string
+    archived: boolean
 }
 
 const bookSchema = new Schema<IBook>({
@@ -70,12 +70,15 @@ const bookSchema = new Schema<IBook>({
 
     bookLanguage: { type: String, enum: bookLanguage, required: true },
 
-    description: { type: String, default: '' }
+    description: { type: String, default: '' },
+
+    archived: { type: Boolean, default: false, select: false }
 
 }, /*{ timestamps: true }*/)
 
 bookSchema.index({name: 'text', author: 'text', genre: 'text'})
 
+// Cascade Delete
 bookSchema.post("findOneAndDelete", async function(doc, next) {
 
     await User.findOneAndUpdate({ books: { $in: [doc._id] } }, { $pull: { books: doc._id } })

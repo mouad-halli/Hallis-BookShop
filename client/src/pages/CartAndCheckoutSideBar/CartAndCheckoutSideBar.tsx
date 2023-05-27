@@ -6,11 +6,11 @@ export const CartAndCheckoutSideBar = (props: any) => {
 
     const {
         isCheckout, cartItems, handleNavigate, subTotal, handleRemoveProduct, handleSubTotalChange,
-        handlePlaceOrder, handlePassToCheckout, setIsCheckout, setDisplay, userAddress, user
+        handlePlaceOrder, handlePassToCheckout, setIsCheckout, setDisplay, userAddress, user, isWaiting
     } = useCartAndCheckoutSidebarHook(props)
 
     return (
-        <div className='h-full flex flex-col gap-y-6 py-2'>
+        <div className='h-full flex flex-col gap-y-6 pt-2 pb-6'>
             <div className=' h-[8%] mx-4 border-b-[1px] flex items-center justify-between px-2'>
                 {isCheckout ?
                     <div className='w-5/6 flex font-bold gap-x-[6.7rem]'>
@@ -48,7 +48,7 @@ export const CartAndCheckoutSideBar = (props: any) => {
                     <span className='text-black text-sm'>${subTotal}</span>
                 </div>
                 {isCheckout ?
-                    <button className='bg-blue-600 py-[7px] rounded font-bold text-white transition hover:scale-105 ease-linear' onClick={handlePlaceOrder}>PLACE ORDER</button>
+                    <button disabled={isWaiting} className='bg-blue-600 py-[7px] rounded font-bold text-white transition hover:scale-105 ease-linear' onClick={handlePlaceOrder}>PLACE ORDER</button>
                     :
                     <button className='bg-slate-800 py-[7px] rounded font-bold text-white transition hover:scale-105 ease-linear' onClick={handlePassToCheckout}>CHECKOUT</button>
                 }

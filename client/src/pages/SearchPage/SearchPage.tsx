@@ -5,8 +5,8 @@ import { $api } from '../../api/API'
 import { PriceRangeSlider } from './PriceRangeSlider'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { Book } from '../ProductPage/useProductPageHook'
 import { useSearchHook } from './useSearchHook'
+import { Book } from '../../@types/book'
 
 interface SearchProduct extends Book {
     display: boolean
@@ -31,7 +31,7 @@ export const SearchPage = () => {
                         {searchType === 'search' &&
                         <div>
                             <h1 className=' font-alegreya_Sc font-bold text-3xl'>Search</h1>
-                            <h2 className=' ml-1 text-sm truncate'>Results for: {searchQuery}</h2>
+                            <h2 className=' ml-1 text-sm truncate'>Results for: {searchQuery}: {searchResult.length}</h2>
                         </div>}
                         <div className='w-full flex flex-col items-end gap-y-8'>
                             <div className=' w-full lg:w-3/6 xl:w-2/6 2xl:w-1/6 h-full flex items-center'>
@@ -42,8 +42,8 @@ export const SearchPage = () => {
                                 />
                             </div>
                             <div className='flex mx-4 gap-x-4'>
-                                <FaSortAmountDown className='text-xl' onClick={handleDisplayHeighPriceFirst} />
-                                <FaSortAmountDownAlt className='text-xl' onClick={handleDisplayLowPriceFirst}/>
+                                <FaSortAmountDown className='text-xl transition hover:scale-125 ease-linear cursor-pointer' onClick={handleDisplayHeighPriceFirst} />
+                                <FaSortAmountDownAlt className='text-xl transition hover:scale-125 ease-linear cursor-pointer' onClick={handleDisplayLowPriceFirst}/>
                             </div>
                         </div>
                     </div>

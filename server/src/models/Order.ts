@@ -1,36 +1,64 @@
 import { Schema, model, Types } from "mongoose";
-import { IUser } from "./User";
-import { ICartItem, cartItemScema } from "./Cart";
 import { IAddress } from "./Address";
+import { IUser } from "./User";
+import { IBook } from "./Book";
 
-
-export enum paymentStatus {
-    SUCCEED = 'succeed',
-    FAILED = 'failed',
+export enum OrderPaymentStatus {
     PENDING = 'pending',
-    REFUNDED = 'refunded'
+    EXPIRED = 'expired',
+    FAILED = 'failed',
+    PAID = 'paid',
+}
+
+export enum OrderStatus {
+    PENDING = 'pending',
+    CANCELED = 'canceled',
+    SHIPPED = 'shipped',
+    DELIVERED = 'delivered',
+    PICKED = 'picked',
+    REFUNDED = 'refunded',
+}
+
+export interface OrderProduct extends Pick<IBook,  'name' | 'imgPath' | 'price'> {
+    original: IBook
+    quantity: number
 }
 
 export interface IOrder {
     _id: Types.ObjectId
+    seller: IUser
     customer: IUser
-    items: ICartItem[]
-    paymentStatus: String
-    address: IAddress
-    trackingNumber: Number
+    product: OrderProduct
+    status: OrderStatus
+    paymentStatus: OrderPaymentStatus
+    trackingNumber?: String
+    checkoutSessionId: String
+    address: Omit<IAddress, 'user'>
 }
 
 const orderSchema = new Schema<IOrder>({
 
+    seller: { type: Schema.Types.ObjectId, ref: 'User' },
+
     customer: { type: Schema.Types.ObjectId, ref: 'User' },
 
-    items: [cartItemScema],
-    
-    paymentStatus: { type: String, enum: paymentStatus, default: paymentStatus.PENDING },
+    product: {
+        original: { type: Schema.Types.ObjectId, ref: 'Book' },
+        name: String,
+        imgPath: String,
+        price: Number,
+        quantity: Number,
+    },
 
-    address: { type: Schema.Types.ObjectId, ref: 'Address' },
+    status: { type: String, enum: OrderStatus, default: OrderStatus.PENDING },
 
-    trackingNumber: { type: Number, default: null }
+    paymentStatus: { type: String, enum: OrderPaymentStatus, default: OrderPaymentStatus.PENDING },
+
+    trackingNumber: { type: Number },
+
+    checkoutSessionId: { type: String, select: false },
+
+    address: { street1: String, street2: String, country: String, city: String, zipCode: String },
 
 }, { timestamps: true })
 
