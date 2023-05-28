@@ -10,7 +10,7 @@ export const SettingsPage = () => {
 
     return (
         <div className="h-full min-h-screen w-full flex flex-col items-center py-20 gap-y-4">
-            <form className="w-5/6 sm:w-4/6 flex flex-col gap-y-4 " onSubmit={handleUpdateProfileSubmit}>
+            <form className="w-5/6 sm:w-4/6 lg:w-7/12 flex flex-col gap-y-4 " onSubmit={handleUpdateProfileSubmit}>
                 <h1 className="font-bold text-2xl text-slate-700">Profile Informations</h1>
                 <div className="flex w-full justify-between">
                     <div className=" w-[45%] flex flex-col gap-y-2">
@@ -64,8 +64,8 @@ export const SettingsPage = () => {
                     <button className="bg-slate-800 text-white text-sm font-medium px-6 py-2 rounded-lg hover:bg-blue-500 hover:scale-105 transition ease-linear " >Update Profile</button>
                 </div>
             </form>
-            <form className="w-5/6 sm:w-4/6 flex flex-col gap-y-4 " onSubmit={handleAddressFormSubmit}>
-                <h1 className="font-bold text-2xl text-slate-700">Address Information</h1>
+            <form className="w-5/6 sm:w-4/6 lg:w-7/12 flex flex-col gap-y-4 " onSubmit={handleAddressFormSubmit}>
+                <h1 className="font-bold text-2xl text-slate-700">Address Informations</h1>
                 <div className="flex w-full justify-between">
                     <div className=" w-[45%] flex flex-col gap-y-2">
                         <span className="font-medium text-slate-700">Street 1</span>

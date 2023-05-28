@@ -127,5 +127,5 @@ export const useCreateOrUpdateListingHook = ({book: bookToUpdate, reload}: Param
         } catch (error: unknown) { handleError(error) }
     }
 
-    return { bookData, Genres, Languages, handleChange, handleImgUpload, handleSubmit }
+    return { bookData, bookImg, Genres, Languages, handleChange, handleImgUpload, handleSubmit }
 }

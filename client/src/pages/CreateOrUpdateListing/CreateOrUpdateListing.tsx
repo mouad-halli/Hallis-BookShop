@@ -1,5 +1,6 @@
 import { useCreateOrUpdateListingHook } from "./useCreateOrUpdateListingHook"
 import { Book } from "../../@types/book"
+import { GrClose } from 'react-icons/gr'
 
 interface PropsType {
     book?: Book,
@@ -8,18 +9,18 @@ interface PropsType {
 
 export const CreateOrUpdateListing = (props: PropsType) => {
 
-    const { bookData, Genres, Languages, handleChange, handleImgUpload, handleSubmit } = useCreateOrUpdateListingHook(props)
+    const { bookData, bookImg, Genres, Languages, handleChange, handleImgUpload, handleSubmit } = useCreateOrUpdateListingHook(props)
 
     return (
             <div className='w-full h-full flex flex-col items-center gap-y-10 md:gap-y-20 py-10'>
                 <div className=' w-full flex items-center justify-between px-8'>
                     <h1 className='text-xl md:text-3xl font-medium md:justify-self-center md:mx-auto'>{props.book ? 'Update' : 'Create'} Product</h1>
                     {/* <div className='flex items-center py-3 font-medium px-6 rounded-lg bg-blue-600 text-white transition ease-linear hover:scale-110 cursor-pointer'> */}
-                        <button className="hidden sm:block py-3 font-medium px-6 rounded-lg bg-blue-600 text-white transition ease-linear hover:scale-110 cursor-pointer" onClick={props.reload}>Cancel</button>
-                        <button className="block sm:hidden py-3 font-medium px-6 rounded-lg bg-blue-600 text-white transition ease-linear hover:scale-110 cursor-pointer" onClick={props.reload}>X</button>
+                        <button className="hidden sm:block py-3 font-medium px-6 rounded-lg bg-blue-600 text-white transition ease-linear hover:scale-110 " onClick={props.reload}>Cancel</button>
+                        <button className="block sm:hidden py-2 font-medium px-4 rounded-lg bg-blue-600 text-white transition ease-linear hover:scale-110 font-mono" onClick={props.reload}>X</button>
                     {/* </div> */}
                 </div>
-                <div className="w-5/6 lg:w-4/6 h-full flex flex-col items-center">
+                <div className="w-5/6 lg:w-7/12 h-full flex flex-col items-center">
                     <form className="w-full h-full flex flex-col gap-y-6" onSubmit={handleSubmit}>
                         <div className="w-full flex justify-between">
                             <div className=" w-[48%] flex flex-col gap-y-2">
@@ -88,17 +89,26 @@ export const CreateOrUpdateListing = (props: PropsType) => {
                                     ></textarea>
                                 </div>
                             </div>
-                            <div className="w-full md:w-[48%] h-full" >
-                                <div className="w-full h-full flex flex-col space-y-2">
-                                    <span className="font-medium text-slate-700">Book Image</span>
-                                    <div className="w-full py-6 flex flex-col justify-center items-center gap-y-6 border-2 border-dashed">
+                            <div className="w-full md:w-[48%] h-full font-medium flex flex-col space-y-2" >
+                                <span className=" text-slate-700">Book Image</span>
+                                <div className={`w-full py-6 flex flex-col justify-center items-center gap-y-6 border-2 border-dashed ${bookImg && 'border-green-400'}`}>
+                                    {!bookImg ?
                                         <h4>Select File here</h4>
-                                        <p className=" text-xs sm:text-sm text-slate-400">Files Supported: PDF, TEXT, DOC , DOCX</p>
-                                        <label className="cursor-pointer transition hover:scale-110 ease-linear">
-                                            <input type="file" name="image" className=" hidden" onChange={handleImgUpload}/>
-                                            <span className="bg-blue-600 text-white px-5 py-2">Choose File</span>
-                                        </label>
-                                    </div>
+                                        :
+                                        <h4 className=" text-green-400">File uploaded successfully</h4>
+                                    }
+                                    <p className=" text-xs sm:text-sm text-slate-400">Files Supported: jpg, jpeg, png, gif</p>
+                                    <label className="cursor-pointer transition hover:scale-110 ease-linear">
+                                        <input type="file" name="image" className=" hidden" onChange={handleImgUpload}/>
+                                        <span className="bg-blue-600 text-white px-5 py-2">
+                                            { !bookImg ?
+                                                'Choose File'
+                                                :
+                                                'Update File'
+                                            }
+                                        </span>
+                                    </label>
+                                    
                                 </div>
                             </div>
                         </div>
