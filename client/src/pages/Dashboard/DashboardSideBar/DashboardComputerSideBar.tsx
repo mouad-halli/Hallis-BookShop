@@ -28,7 +28,7 @@ export const DashboardComputerSideBar = (props: propsType) => {
         <>
         <div className="w-full group relative flex flex-col items-center gap-y-3 ">
             <label className="cursor-pointer h-32 w-32 sm:h-[5rem] sm:w-[5rem] lg:h-32 lg:w-32">
-                <span className=" group-hover:flex justify-center items-center hidden absolute h-32 w-32 rounded-full bg-opacity-50 bg-slate-800 ">
+                <span className=" group-hover:flex justify-center items-center hidden absolute h-32 w-32 sm:h-[5rem] sm:w-[5rem] lg:h-32 lg:w-32 rounded-full bg-opacity-50 bg-slate-800 ">
                     <TbFileUpload size={30} color="white" />
                 </span>
                 <input type="file" name="image" className=" hidden" onChange={handleUploadImage}/>

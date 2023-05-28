@@ -41,11 +41,11 @@ export const SearchItem = (props: Props) => {
     }
 
     return (
-        <div className=' w-56 h-[25rem] flex flex-col justify-center gap-y-4 px-4 drop-shadow-lg'>
+        <div className=' w-56 h-[25rem] flex flex-col justify-center gap-y-4 px-4 drop-shadow-lg '>
             <div className='relative group w-full h-[72%] rounded-md overflow-hidden cursor-pointer'  onClick={() => navigate(`/product/${book._id}`)}>
                 <img className='object-cover object-center h-full w-full' src={book.imgPath} />
-                <div className='absolute h-full w-full top-0 flex translate-y-full group-hover:translate-y-0 transition ease-linear duration-200 group flex-col items-center justify-end gap-y-4 py-6 backdrop-blur-sm'>
-                    <p className=' text-sm font-medium h-5/6 mx-2 text-center overflow-clip'>{book.description}</p>
+                <div className='absolute h-full w-full top-0 flex translate-y-full group-hover:translate-y-0 transition ease-linear duration-200 group flex-col items-center justify-end gap-y-4 py-6 backdrop-blur-sm bg-white bg-opacity-20'>
+                    <p className=' text-sm font-bold h-5/6 mx-2 text-center overflow-clip'>{book.description}</p>
                     <div className='h-1/6 translate-y-96 group-hover:translate-y-0 delay-200 transition'>
                         {userId !== book.seller._id && <button className=' py-2 font-medium px-4 drop-shadow-lg bg-blue-600 rounded-lg text-white transition hover:scale-105' onClick={(e) => handleClick(e)}>
                             {productQuantityInCart > 0 ? ' IN CART ' : 'ADD TO CART'}

@@ -28,8 +28,8 @@ export const DashboardMobileSideBar = (props: propsType) => {
 
   	return (
 		<>
-		<label className="cursor-pointer h-28 w-28">
-            <span className=" group-hover:flex justify-center items-center hidden absolute h-32 w-32 rounded-full bg-opacity-50 bg-slate-800 ">
+		<label className="group cursor-pointer h-28 w-28 mt-6">
+            <span className=" group-hover:flex justify-center items-center hidden absolute h-28 w-28 rounded-full bg-opacity-50 bg-slate-800 ">
                 <TbFileUpload size={30} color="white" />
             </span>
             <input type="file" name="image" className=" hidden" onChange={handleUploadImage}/>

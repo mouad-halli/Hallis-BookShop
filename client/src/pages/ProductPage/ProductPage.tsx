@@ -25,7 +25,7 @@ export const ProductPage = () => {
                                 <span>by {book.author}</span>
                                 <span>{book.genre}</span>
                             </div>
-                            <p className=' text-xs text-center lg:text-sm font-medium px-20 line-clamp-[7]'>{book.description}</p>
+                            <p className=' text-xs text-center lg:text-sm font-medium px-8 sm:px-20 line-clamp-[7]'>{book.description}</p>
                             <div className='w-full flex justify-evenly'>
                                 <div className=' w-[30%] lg:w-[25%] p-2 lg:p-4 rounded-sm text-xs lg:text-base text-center bg-blue-200 ring-1 cursor-pointer'>
                                     <h1>Hard Cover</h1>
@@ -56,9 +56,13 @@ export const ProductPage = () => {
                     <div className='w-5/6 lg:w-[55%] p-4 flex flex-col items-center gap-y-14'>
                         <h1 className=' w-full text-start px-8 text-xl md:text-3xl xl:text-4xl font-medium'>More from the seller</h1>
                         <div className=' w-full flex flex-wrap justify-center sm:justify-start gap-y-4 gap-x-10 sm:px-8'>
-                            {Children.toArray(book.seller.books.map((book: Book) => (
-                                <img className='w-[13rem] h-[20rem] rounded-md transition hover:scale-105 ease-linear drop-shadow-md hover:drop-shadow-lg cursor-pointer ' src={book.imgPath} onClick={() => navigate(`/product/${book._id}`)} />
-                            )))}
+                            {Children.toArray(book.seller.books.map((product: Book) => {
+                                return book._id !== product._id ?
+                                    <img className='w-[13rem] h-[20rem] rounded-md transition hover:scale-105 ease-linear drop-shadow-md hover:drop-shadow-lg cursor-pointer ' src={product.imgPath} onClick={() => navigate(`/product/${product._id}`)} />
+                                    :
+                                    null
+
+                            }))}
                         </div>
                     </div>
                 </div>

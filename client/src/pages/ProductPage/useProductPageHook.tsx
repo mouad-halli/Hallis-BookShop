@@ -61,7 +61,6 @@ export const useProductPageHook = () => {
     }
 
     useEffect(() => {
-        window.scroll(0, 0)
         
         const fetchPageContent = async () => {
             try {
@@ -72,7 +71,7 @@ export const useProductPageHook = () => {
     
             } catch (error) { console.log(error) }       
         }
-
+        window.scrollTo({ top: 0, behavior: 'smooth'})
         fetchPageContent()
 
     }, [params?.bookId])

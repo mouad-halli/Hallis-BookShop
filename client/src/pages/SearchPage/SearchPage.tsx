@@ -34,16 +34,22 @@ export const SearchPage = () => {
                             <h2 className=' ml-1 text-sm truncate'>Results for: {searchQuery}: {searchResult.length}</h2>
                         </div>}
                         <div className='w-full flex flex-col items-end gap-y-8'>
-                            <div className=' w-full lg:w-3/6 xl:w-2/6 2xl:w-1/6 h-full flex items-center'>
+                            {/* <div className=' w-full lg:w-3/6 xl:w-2/6 2xl:w-1/6 h-full flex items-center'>
                                 <PriceRangeSlider
                                     initialMin={0} initialMax={1000}
                                     min={0} max={1000} priceCap={100} step={1}
                                     handleDisplayIfInPriceRange={handleDisplayIfInPriceRange}
                                 />
-                            </div>
-                            <div className='flex mx-4 gap-x-4'>
-                                <FaSortAmountDown className='text-xl transition hover:scale-125 ease-linear cursor-pointer' onClick={handleDisplayHeighPriceFirst} />
-                                <FaSortAmountDownAlt className='text-xl transition hover:scale-125 ease-linear cursor-pointer' onClick={handleDisplayLowPriceFirst}/>
+                            </div> */}
+                            <div className='w-full flex justify-center sm:justify-end gap-x-4'>
+                                <button className='flex items-center gap-x-2 transition hover:scale-110 ease-linear' onClick={handleDisplayHeighPriceFirst}>
+                                    <span className='font-bold text-sm'>Highest Price</span>
+                                    <FaSortAmountDown />
+                                </button>
+                                <button className='flex items-center gap-x-2 transition hover:scale-110 ease-linear' onClick={handleDisplayLowPriceFirst}>
+                                    <span className='font-bold text-sm'>Lowest Price</span>
+                                    <FaSortAmountDownAlt />
+                                </button>
                             </div>
                         </div>
                     </div>
