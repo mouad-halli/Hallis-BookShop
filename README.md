@@ -67,7 +67,12 @@ https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/5729b014-181f-4f
 
 <table>
   <tr>
-    <td><img src="readme-imgs/chat-mobile.png" alt="chat-list" /></td>
+    <td><img src="readme-imgs/add-product-computer.PNG" alt="add-product-computer" /></td>
+    <td><img src="readme-imgs/add-product-mobile.PNG" alt="add-product-mobile" /></td>
+  </tr>
+  <tr>
+    <td><img src="readme-imgs/update-product-computer.PNG" alt="update-product-computer" /></td>
+    <td><img src="readme-imgs/update-product-mobile.PNG" alt="update-product-mobile" /></td>
   </tr>
 </table>
 
