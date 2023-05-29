@@ -66,6 +66,10 @@ https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/5729b014-181f-4f
 ####  - In the Products page you can Post a book to sell, update or delete previous Products .
 
 <table>
+   <tr>
+    <td><img src="readme-imgs/products-computer.PNG" alt="products-computer" /></td>
+    <td><img src="readme-imgs/products-mobile.PNG" alt="products-mobile" /></td>
+  </tr>
   <tr>
     <td><img src="readme-imgs/add-product-computer.PNG" alt="add-product-computer" /></td>
     <td><img src="readme-imgs/add-product-mobile.PNG" alt="add-product-mobile" /></td>
