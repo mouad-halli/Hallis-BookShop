@@ -48,11 +48,8 @@ The Web-App contains 5 main sections: **Authentication**, **Home**, **Search**, 
 
 ### Home
 #### The Home Section contain a slider that displays the last 6 Books posted by the platform sellers and a list of featured sellers with a card carousel of their last 6 posted books .
-<table>
-  <tr>
-    <td><img src="readme-imgs/home-computer.png" alt="Home" /></td>
-  </tr>
-</table>
+
+https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/e02528c9-2b6e-4890-8745-8bc226f0de0a
 
 ### Search
 #### You can search for a book by its book name or author name or its genre, you can hover over a search result item to read the book's description or add the book to your cart, if you want more information about the book you can access the book page by clicking on the item .
