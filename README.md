@@ -33,16 +33,16 @@ The Web-App contains 5 main sections: **Authentication**, **Home**, **Search**, 
 #### You can Authenticate safely with you google account or create an account manually .
 <table>
   <tr>
-    <td><img src="readme-imgs/register-computer.png" alt="reagister-computer" /></td>
-    <td align="center"><img src="readme-imgs/register-mobile.png" alt="reagister-mobile" /></td>
+    <td><img src="readme-imgs/register-computer.PNG" alt="reagister-computer" /></td>
+    <td align="center"><img src="readme-imgs/register-mobile.PNG" alt="reagister-mobile" /></td>
   </tr>
 <!--   <tr>
     <td><img src="readme-imgs/register-tablet.png" alt="reagister-tablet" /></td>
     <td><img src="readme-imgs/login-tablet.png" alt="login-tablet" /></td>
   <tr/> -->
   <tr>
-    <td><img src="readme-imgs/login-computer.png" alt="login-computer" /></td>
-    <td align="center"><img src="readme-imgs/login-mobile.png" alt="login-mobile" /></td>
+    <td><img src="readme-imgs/login-computer.PNG" alt="login-computer" /></td>
+    <td align="center"><img src="readme-imgs/login-mobile.PNG" alt="login-mobile" /></td>
   </tr>
 </table>
 
@@ -55,8 +55,8 @@ https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/e02528c9-2b6e-48
 #### You can search for a book by its book name or author name or its genre, you can hover over a search result item to read the book's description or add the book to your cart, if you want more information about the book you can access the book page by clicking on the item .
 <table>
   <tr>
-    <td><img src="readme-imgs/settings-computer.png" alt="settings-computer" /></td>
-    <td><img src="readme-imgs/settings-mobile.png" alt="settings-mobile" /></td>
+    <td><img src="readme-imgs/search-computer.png" alt="saerch-computer" /></td>
+    <td><img src="readme-imgs/search-mobile.png" alt="search-mobile" /></td>
   </tr>
 <!--   <tr>
     <td><img src="readme-imgs/settings-tablet.png" alt="settings-tablet" /></td>
