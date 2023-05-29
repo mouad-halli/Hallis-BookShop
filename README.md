@@ -36,11 +36,7 @@ The Web-App contains 5 main sections: **Authentication**, **Home**, **Search**, 
     <td><img src="readme-imgs/register-computer.PNG" alt="reagister-computer" /></td>
     <td align="center"><img src="readme-imgs/register-mobile.PNG" alt="reagister-mobile" /></td>
   </tr>
-<!--   <tr>
-    <td><img src="readme-imgs/register-tablet.png" alt="reagister-tablet" /></td>
-    <td><img src="readme-imgs/login-tablet.png" alt="login-tablet" /></td>
-  <tr/> -->
-  <tr>
+ 
     <td><img src="readme-imgs/login-computer.PNG" alt="login-computer" /></td>
     <td align="center"><img src="readme-imgs/login-mobile.PNG" alt="login-mobile" /></td>
   </tr>
@@ -58,22 +54,13 @@ https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/e02528c9-2b6e-48
     <td><img src="readme-imgs/search-computer.png" alt="saerch-computer" /></td>
     <td><img src="readme-imgs/search-mobile.png" alt="search-mobile" /></td>
   </tr>
-<!--   <tr>
-    <td><img src="readme-imgs/settings-tablet.png" alt="settings-tablet" /></td>
-  </tr> -->
 </table>
 
 ### Product-Page
 #### This Section contains all information about a certain book, and a list of 4 books similar to the current book.
-<table>
-  <tr>
-    <td><img src="readme-imgs/settings-computer.png" alt="settings-computer" /></td>
-    <td><img src="readme-imgs/settings-mobile.png" alt="settings-mobile" /></td>
-  </tr>
-<!--   <tr>
-    <td><img src="readme-imgs/settings-tablet.png" alt="settings-tablet" /></td>
-  </tr> -->
-</table>
+
+https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/5729b014-181f-4f85-ab8c-1f27475693d6
+
 
 ### Dashboard - This Section contains Products, Orders(Under-Construction) and Settings Pages
 ####  - In the Products page you can Post a book to sell, update or delete previous Products .
