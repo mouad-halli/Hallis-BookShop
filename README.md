@@ -104,8 +104,12 @@ https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/5729b014-181f-4f
   
 <table>
   <tr>
-    <td><img src="readme-imgs/channel-computer.png" alt="channel-computer" /></td>
-    <td><img src="readme-imgs/channel-mobile.png" alt="channel-mobile" /></td>
+    <td><img src="readme-imgs/cart-computer.PNG" alt="cart-computer" /></td>
+    <td><img src="readme-imgs/cart-mobile.PNG" alt="cart-mobile" /></td>
+  </tr>
+  <tr>
+    <td><img src="readme-imgs/checkout-computer.PNG" alt="checkout-computer" /></td>
+    <td><img src="readme-imgs/checkout-mobile.PNG" alt="checkout-mobile" /></td>
   </tr>
 </table
   
