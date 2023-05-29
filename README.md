@@ -80,23 +80,22 @@ https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/5729b014-181f-4f
   </tr>
 </table>
 
-####  - In the Orders page you can track all the orders buys and sells you made and mention their state (delivered, picked, shipped ...)
+####  - In the Orders page you can track all the orders buys and sells you made and mention their state (delivered, picked, shipped ...) (UNDER-CONSTRUCTION)
 
-<table>
+<!-- <table>
   <tr>
     <td><img src="readme-imgs/find-friends.png" alt="find-friends" /></td>
     <td><img src="readme-imgs/friends.png" alt="friends-list" /></td>
     <td><img src="readme-imgs/requests.png" alt="requests-list" /></td>
   </tr>
-</table>
+</table> -->
 
 ####  - In the Settings page you can create, update or delete your picture, personal information and address information.
 
 <table>
   <tr>
-    <td><img src="readme-imgs/find-friends.png" alt="find-friends" /></td>
-    <td><img src="readme-imgs/friends.png" alt="friends-list" /></td>
-    <td><img src="readme-imgs/requests.png" alt="requests-list" /></td>
+    <td><img src="readme-imgs/settings-computer.PNG" alt="settings-computer" /></td>
+    <td><img src="readme-imgs/settings-mobile.PNG" alt="settings-mobile" /></td>
   </tr>
 </table>
   
