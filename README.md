@@ -52,7 +52,7 @@ The Web-App contains 5 main sections: **Authentication**, **Home**, **Search**, 
 https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/e02528c9-2b6e-4890-8745-8bc226f0de0a
 
 ### Search
-#### You can search for a book by its book name or author name or its genre, you can hover over a search result item to read the book's description or add the book to your cart, if you want more information about the book you can access the book page by clicking on the item .
+#### You can search for a book by its name, author name or its genre, you can hover over a search item to read the book's description or add the book to your cart, if you want more information about the book you can access the book page by clicking on the item .
 <table>
   <tr>
     <td><img src="readme-imgs/search-computer.png" alt="saerch-computer" /></td>
