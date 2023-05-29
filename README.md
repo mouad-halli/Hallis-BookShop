@@ -36,7 +36,7 @@ The Web-App contains 5 main sections: **Authentication**, **Home**, **Search**, 
     <td><img src="readme-imgs/register-computer.PNG" alt="reagister-computer" /></td>
     <td align="center"><img src="readme-imgs/register-mobile.PNG" alt="reagister-mobile" /></td>
   </tr>
- 
+  <tr>
     <td><img src="readme-imgs/login-computer.PNG" alt="login-computer" /></td>
     <td align="center"><img src="readme-imgs/login-mobile.PNG" alt="login-mobile" /></td>
   </tr>
