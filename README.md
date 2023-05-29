@@ -33,16 +33,12 @@ The Web-App contains 5 main sections: **Authentication**, **Home**, **Search**, 
 #### You can Authenticate safely with you google account or create an account manually .
 <table>
   <tr>
-    <td><img src="readme-imgs/register-computer.png" alt="reagister-computer" /></td>
-    <td align="center"><img src="readme-imgs/register-mobile.png" alt="reagister-mobile" /></td>
+    <td><img src="readme-imgs/register-computer.PNG" alt="reagister-computer" /></td>
+    <td align="center"><img src="readme-imgs/register-mobile.PNG" alt="reagister-mobile" /></td>
   </tr>
-<!--   <tr>
-    <td><img src="readme-imgs/register-tablet.png" alt="reagister-tablet" /></td>
-    <td><img src="readme-imgs/login-tablet.png" alt="login-tablet" /></td>
-  <tr/> -->
   <tr>
-    <td><img src="readme-imgs/login-computer.png" alt="login-computer" /></td>
-    <td align="center"><img src="readme-imgs/login-mobile.png" alt="login-mobile" /></td>
+    <td><img src="readme-imgs/login-computer.PNG" alt="login-computer" /></td>
+    <td align="center"><img src="readme-imgs/login-mobile.PNG" alt="login-mobile" /></td>
   </tr>
 </table>
 
@@ -52,35 +48,31 @@ The Web-App contains 5 main sections: **Authentication**, **Home**, **Search**, 
 https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/e02528c9-2b6e-4890-8745-8bc226f0de0a
 
 ### Search
-#### You can search for a book by its book name or author name or its genre, you can hover over a search result item to read the book's description or add the book to your cart, if you want more information about the book you can access the book page by clicking on the item .
+#### You can search for a book by its name, author name or its genre, you can hover over a search item to read the book's description or add the book to your cart, if you want more information about the book you can access the book page by clicking on the item .
 <table>
   <tr>
-    <td><img src="readme-imgs/settings-computer.png" alt="settings-computer" /></td>
-    <td><img src="readme-imgs/settings-mobile.png" alt="settings-mobile" /></td>
+    <td><img src="readme-imgs/search-computer.png" alt="saerch-computer" /></td>
+    <td><img src="readme-imgs/search-mobile.png" alt="search-mobile" /></td>
   </tr>
-<!--   <tr>
-    <td><img src="readme-imgs/settings-tablet.png" alt="settings-tablet" /></td>
-  </tr> -->
 </table>
 
 ### Product-Page
 #### This Section contains all information about a certain book, and a list of 4 books similar to the current book.
-<table>
-  <tr>
-    <td><img src="readme-imgs/settings-computer.png" alt="settings-computer" /></td>
-    <td><img src="readme-imgs/settings-mobile.png" alt="settings-mobile" /></td>
-  </tr>
-<!--   <tr>
-    <td><img src="readme-imgs/settings-tablet.png" alt="settings-tablet" /></td>
-  </tr> -->
-</table>
+
+https://github.com/mouad-halli/Hallis-BookShop/assets/123669974/5729b014-181f-4f85-ab8c-1f27475693d6
+
 
 ### Dashboard - This Section contains Products, Orders(Under-Construction) and Settings Pages
 ####  - In the Products page you can Post a book to sell, update or delete previous Products .
 
 <table>
   <tr>
-    <td><img src="readme-imgs/chat-mobile.png" alt="chat-list" /></td>
+    <td><img src="readme-imgs/add-product-computer.PNG" alt="add-product-computer" /></td>
+    <td><img src="readme-imgs/add-product-mobile.PNG" alt="add-product-mobile" /></td>
+  </tr>
+  <tr>
+    <td><img src="readme-imgs/update-product-computer.PNG" alt="update-product-computer" /></td>
+    <td><img src="readme-imgs/update-product-mobile.PNG" alt="update-product-mobile" /></td>
   </tr>
 </table>
 
