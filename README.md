@@ -1,4 +1,4 @@
-<h1 align="center">ChatPals</h1>
+<h1 align="center">Halli's BookShop</h1>
 
 <h3 align="center">It's a MERN Stack Single-Page E-Commerce Web-Application</h3>
 
